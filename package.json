@@ -1,0 +1,9 @@
+{
+  "name": "seda-burn-monitor",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env burn-monitor.js",
+    "dev": "node --watch --env-file=.env burn-monitor.js"
+  }
+}
