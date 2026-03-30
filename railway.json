@@ -5,6 +5,6 @@
   "deploy": {
     "startCommand": "node burn-monitor.js",
     "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 5
+    "restartPolicyMaxRetries": -1
   }
 }

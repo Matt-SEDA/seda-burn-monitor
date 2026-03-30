@@ -72,6 +72,14 @@ async function checkAndPost() {
   }
 }
 
+// Prevent unhandled errors from crashing the process
+process.on('unhandledRejection', (err) => {
+  console.error(`[${new Date().toISOString()}] Unhandled rejection: ${err.message}`);
+});
+process.on('uncaughtException', (err) => {
+  console.error(`[${new Date().toISOString()}] Uncaught exception: ${err.message}`);
+});
+
 // Startup
 console.log(`Burn monitor started. Will post daily at ${POST_HOUR_CET}:00 CET`);
 console.log(`Checking every ${CHECK_INTERVAL_MS / 1000}s`);
